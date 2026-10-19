@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wapens &amp; tactiek – Somme 1914–1918</title>
+<meta name="description" content="Wapens en tactiek aan de Somme: artillerie en het kruipend spervuur, mijnen, machinegeweren, de eerste tanks, gas en de nieuwe aanpak van 1918.">
+<meta name="theme-color" content="#34402b">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#fffdf7;--ink:#2b2b2b;--accent:#8b5a2b;--bar:#34402b;--poppy:#c92a2a}
+*{box-sizing:border-box}
+html.sm{scroll-behavior:smooth}
+html,body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+#top{position:sticky;top:0;z-index:50;background:var(--bar);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#bar{display:flex;align-items:center;gap:6px;padding:calc(6px + env(safe-area-inset-top)) 8px 6px}
+#bar h1{font-size:15px;margin:0;flex:1;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bar h1 small{display:block;font-weight:400;font-size:11px;opacity:.8}
+.tbtn{background:#fff;color:var(--bar);border:0;border-radius:18px;padding:7px 11px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block}
+.tbtn.home{padding:7px 9px}
+.row{display:flex;gap:6px;overflow-x:auto;padding:0 8px 7px;scrollbar-width:none}
+.row::-webkit-scrollbar{display:none}
+.ych{flex:0 0 auto;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:5px 11px;border-radius:15px;border:1.5px solid rgba(255,255,255,.35)}
+.ych.on{background:var(--poppy);border-color:var(--poppy)}
+main{max-width:720px;margin:0 auto;padding:10px 12px 20px}
+.intro{font-size:14px;line-height:1.5;color:#444;margin:6px 2px}
+details.toc{font-size:13.5px;margin:4px 2px 6px}
+details.toc summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.toc ol{padding-left:22px;line-height:1.6;margin:6px 0}
+details.toc a{color:var(--bar)}
+.grp{scroll-margin-top:96px}
+.grp h2{font-size:21px;color:var(--accent);margin:22px 0 8px;padding:0 2px 4px;border-bottom:2px solid #e4d9c6}
+.st{background:#fff;border:1px solid #e4d9c6;border-left:5px solid #7048e8;border-radius:12px;padding:12px 13px;margin:0 0 14px;box-shadow:0 1px 4px rgba(52,64,43,.08);scroll-margin-top:100px}
+.st h3{margin:0;font-size:18px;color:var(--bar);line-height:1.25}
+.wie{font-size:12.5px;color:#7a6a50;margin:2px 0 6px;font-style:italic}
+.st p{font-size:14.5px;line-height:1.55;margin:6px 0}
+blockquote{margin:10px 0;padding:8px 12px;border-left:3px solid var(--poppy);background:#fbf5ee;font-style:italic;font-size:14px;line-height:1.5;color:#4a3f2c}
+blockquote cite{display:block;font-style:normal;font-size:11.5px;color:#777;margin-top:4px}
+.poem{margin:10px 0;background:#fbf5ee;border-radius:10px;padding:8px 12px}
+.poem summary{cursor:pointer;font-weight:700;color:var(--poppy);font-size:14px}
+.poem .cols{display:grid;grid-template-columns:1fr;gap:6px 22px}
+@media(min-width:620px){.poem .cols{grid-template-columns:1fr 1fr}}
+.poem h4{margin:10px 0 2px;font-size:15px;color:var(--bar)}
+.poem p{font-family:Georgia,"Times New Roman",serif;font-size:14.5px;line-height:1.5;margin:6px 0}
+.poem .pc{font-size:11.5px;color:#777}
+.leg{font-size:13px;background:#fff4e6;border-left:3px solid #f08c00;padding:6px 9px;margin:10px 0 0;line-height:1.45}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.lk{font-size:12.5px;text-decoration:none;background:#f3e6d6;color:var(--bar);border-radius:12px;padding:5px 10px;font-weight:600}
+.lk.tl{background:#ece5fd}.lk.sim{background:#fde4e1}
+details.src{margin-top:8px;font-size:12px;color:#666}
+details.src summary{cursor:pointer}
+details.src ul{margin:4px 0;padding-left:18px;line-height:1.5}
+details.src a{color:var(--accent)}
+.st.flash{animation:flash 2.2s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 4px #7048e8}100%{box-shadow:0 1px 4px rgba(52,64,43,.08)}}
+.fotos{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.ft{margin:0;flex:1 1 130px;max-width:170px;min-width:120px;background:#fbf5ee;border-radius:10px;padding:5px;display:flex;flex-direction:column}
+.ft.gr{flex:1 1 170px;max-width:300px}
+.ft.gr img{max-height:250px;object-fit:cover}
+.ft img{display:block;width:100%;height:auto;border-radius:7px;background:#ece5d8}
+.ft.po img{max-height:220px;object-fit:cover;object-position:top}
+.ft figcaption{font-size:12px;line-height:1.35;color:#4a3f2c;margin:4px 2px 0}
+.ft .cr{display:block;font-size:10.5px;color:#888;margin-top:2px}
+.ft .cr a{color:#888}
+.fotonote{font-size:11.5px;color:#888;margin:0 0 4px}
+.note{font-size:12.5px;color:#666;line-height:1.5}
+footer{text-align:center;font-size:12px;color:#777;padding:10px 16px calc(24px + env(safe-area-inset-bottom))}
+footer a{color:var(--accent)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.st.flash{animation:none}}
+.tg{display:inline-block;font-size:11px;font-weight:800;border-radius:999px;padding:1px 7px;white-space:nowrap;vertical-align:middle}.tg.lg{background:#f3e3f7;color:#6a1b7a}.tg.om{background:#fff1d6;color:#8a5300}
+.ref{font-size:11px;vertical-align:super;line-height:0;text-decoration:none;color:var(--accent);font-weight:700}
+ol.bronnen{font-size:12.5px;line-height:1.5;padding-left:22px;color:#555}ol.bronnen a{color:var(--accent);word-break:break-word}ol.bronnen li{scroll-margin-top:90px}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:4px 10px;padding:9px 0;border-bottom:1px solid #eee5d6;scroll-margin-top:100px}.ev .d{font-weight:800;color:var(--accent);font-size:13px;line-height:1.3}.ev h3{margin:0 0 2px;font-size:15.5px;color:var(--bar)}.ev p{margin:2px 0;font-size:14px;line-height:1.5}
+.box{background:#fff;border:1px solid #e4d9c6;border-left:5px solid var(--accent);border-radius:12px;padding:11px 13px;margin:0 0 12px}
+.box h3{margin:0 0 4px;font-size:17px;color:var(--bar)}.box p,.box li{font-size:14.5px;line-height:1.55}.box p{margin:6px 0}
+.warn{background:#fff5f5;border-left-color:#c92a2a}
+dl.terms dt{font-weight:800;color:var(--bar);margin-top:10px;font-size:15px;scroll-margin-top:100px}dl.terms dd{margin:2px 0 0 0;font-size:14px;line-height:1.5}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;margin:6px 0}table.t td,table.t th{border-bottom:1px solid #e4d9c6;padding:5px 4px;text-align:left;vertical-align:top}table.t th{color:var(--accent)}
+.lk.kaart{background:#e7f1fb}
+.st{border-left-color:#c92a2a}
+
+</style>
+<!--pwa-->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Somme 14–18"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>#offtoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom));z-index:2000;max-width:min(92vw,520px);background:#212529;color:#fff;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;border-radius:12px;padding:9px 34px 9px 12px;box-shadow:0 3px 12px rgba(0,0,0,.35)}#offtoast button{position:absolute;right:6px;top:5px;background:none;border:0;color:#fff;font-size:18px;cursor:pointer}</style>
+<script>
+(function(){
+  if('serviceWorker' in navigator && (location.protocol==='https:'||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  function toast(on){ let t=document.getElementById('offtoast');
+    if(!on){ if(t) t.remove(); return; } if(t||!document.body) return;
+    t=document.createElement('div'); t.id='offtoast'; t.setAttribute('role','status');
+    t.innerHTML='📴 <b>Offline</b>: je bekijkt de bewaarde versie.'+(document.getElementById('map')||window.L?' Kaarttegels die je eerder bekeek, blijven zichtbaar; de luchtfoto en de lidar-laag hebben internet nodig.':'')+'<button type="button" aria-label="Sluiten">×</button>';
+    t.querySelector('button').onclick=()=>t.remove(); document.body.appendChild(t); }
+  addEventListener('offline',()=>toast(true)); addEventListener('online',()=>toast(false));
+  document.addEventListener('DOMContentLoaded',()=>{ if(navigator.onLine===false) toast(true); });
+})();
+</script>
+<!--/pwa-->
+</head>
+<body>
+<div id="top"><div id="bar"><a class="tbtn home" href="index.html" aria-label="Home / menu">🏠</a><h1>Wapens &amp; tactiek<small>Geschut, mijnen, tanks, nieuwe tactiek</small></h1><a class="tbtn" href="kaart.html">🗺 Kaart</a></div><nav class="row" aria-label="Snel naar"><a class="ych" href="#art">Artillerie</a><a class="ych" href="#mijn">Mijnen</a><a class="ych" href="#mg">Machinegeweren</a><a class="ych" href="#tank">Tanks</a><a class="ych" href="#gas">Gas</a><a class="ych" href="#1918">Nieuwe tactiek</a></nav></div>
+<main>
+<p class="intro">Hoe werd er aan de Somme gevochten? Getallen met ≈ zijn schattingen; cijfers tussen haken verwijzen naar de bronnen.</p>
+<section class="grp" id="art"><h2>💥 Artillerie</h2>
+<div class="box"><h3>Een week bombardement</h3>
+<p>Voor 1 juli 1916 schoot de Britse artillerie zeven dagen lang op de Duitse linies: ≈ 1,5 miljoen granaten (≈). Het idee was dat er daarna niets meer over zou zijn en dat de infanterie rustig over het niemandsland kon lopen. Maar het geschut stond verspreid over een breed front, veel granaten waren shrapnel (bolletjes die weinig doen tegen prikkeldraad of beton) en een groot deel ontplofte niet. De Duitse soldaten zaten in kelders tot ≈ 10 meter diep en kwamen ongedeerd boven toen het vuren stopte. <a class="ref" href="#bron-1">[1]</a><a class="ref" href="#bron-2">[2]</a></p></div>
+<div class="box"><h3>Het kruipend spervuur</h3>
+<p>Een ‘creeping barrage’ is een muur van granaatinslagen die in vaste stappen (bijvoorbeeld 50 m per minuut) voor de eigen infanterie uit loopt. De verdedigers moeten dekking zoeken tot de aanvallers er bijna zijn. Op 1 juli werd het hier en daar al gebruikt, onder meer door de Fransen en bij Mametz en Montauban, waar de aanval slaagde. Vanaf juli 1916 werd het de standaard. Het vroeg veel oefening: liep de infanterie te langzaam, dan was het vuur weg; liep ze te snel, dan liep ze in haar eigen granaten. <a class="ref" href="#bron-3">[3]</a> <a class="lk sim" href="simulatie.html#bombardement">▶ In de simulatie</a></p></div>
+</section>
+<section class="grp" id="mijn"><h2>⛏️ Mijnen</h2>
+<div class="box"><h3>Onder het niemandsland door</h3>
+<p>Mijnwerkers in uniform (de Tunnelling Companies) groeven gangen tot onder de Duitse stellingen en vulden het eind met explosieven. Op 1 juli 1916 gingen een reeks mijnen af. De grootste waren Lochnagar en Y Sap bij La Boisselle (elk ≈ 18–27 ton, om 7:28 uur) en die onder Hawthorn Ridge (≈ 18 ton, al om 7:20 uur). Dat de mijn bij Hawthorn tien minuten te vroeg afging, gaf de Duitsers tijd om hun posities in te nemen. De Lochnagar-krater is nog altijd ≈ 90 m breed en ≈ 20 m diep. <a class="ref" href="#bron-4">[4]</a><a class="ref" href="#bron-5">[5]</a> <a class="lk kaart" href="kaart.html#p=lochnagar">🗺 Op de kaart</a> <a class="lk sim" href="simulatie.html#juli1">▶ In de simulatie</a></p></div>
+</section>
+<section class="grp" id="mg"><h2>🔫 Machinegeweren</h2>
+<div class="box"><h3>Het wapen van 1 juli</h3>
+<p>Het Duitse MG 08 en het Britse Vickers-machinegeweer waren zware, watergekoelde wapens die honderden kogels per minuut konden vuren, urenlang. Een paar goed geplaatste machinegeweren konden een hele aanval stoppen. Op 1 juli 1916 vielen de meeste slachtoffers in de eerste uren, toen de aanvallers in rijen over open terrein liepen. De Britten zetten de Vickers ook in om over de hoofden van hun eigen troepen heen te schieten op wegen en loopgraven achter de Duitse lijn. <a class="ref" href="#bron-6">[6]</a><a class="ref" href="#bron-7">[7]</a><a class="ref" href="#bron-2">[2]</a></p></div>
+</section>
+<section class="grp" id="tank"><h2>🛡️ Tanks</h2>
+<div class="box"><h3>De Mark I</h3>
+<p>De Britse tank was in het geheim ontwikkeld; de naam ‘tank’ (watertank) moest het doel verbergen. De Mark I woog ≈ 28 ton, reed ≈ 6 km/u en had een bemanning van acht man, die in hitte, lawaai en uitlaatgassen werkte. Er waren twee versies: ‘male’ met kanonnen en ‘female’ met alleen machinegeweren. Op 15 september 1916 bij Flers-Courcelette kwamen ze voor het eerst in actie. Veel tanks vielen uit door pech of bleven vastzitten, maar het effect op beide kanten was groot. <a class="ref" href="#bron-8">[8]</a><a class="ref" href="#bron-9">[9]</a> <a class="lk sim" href="simulatie.html#flers">▶ In de simulatie</a></p></div>
+<div class="box"><h3>Tank tegen tank</h3>
+<p>Op 24 april 1918 kwamen bij Villers-Bretonneux voor het eerst tanks tegenover elkaar te staan: drie Britse Mark IV’s tegen Duitse A7V’s, bij Cachy. Duitsland bouwde maar ≈ 20 A7V’s. In augustus 1918 bij Amiens zetten de geallieerden ≈ 500 tanks in, ook de snellere Whippet. <a class="ref" href="#bron-10">[10]</a><a class="ref" href="#bron-11">[11]</a><a class="ref" href="#bron-15">[15]</a> <a class="lk sim" href="simulatie.html#villers">▶ In de simulatie</a></p></div>
+</section>
+<section class="grp" id="gas"><h2>☁️ Gas</h2>
+<div class="box"><h3>Gas aan de Somme</h3>
+<p>Aan de Somme werd gas minder gebruikt dan bij Ieper of Verdun, maar het speelde wel een rol. Beide kanten schoten gasgranaten op batterijen en aanvoerwegen. Bij het begin van operatie Michael, op 21 maart 1918, bestond een groot deel van het Duitse bombardement uit gasgranaten: eerst op de Britse artillerie, daarna op de voorste linies. <a class="ref" href="#bron-16">[16]</a><a class="ref" href="#bron-12">[12]</a> <a class="lk sim" href="simulatie.html#michael">▶ In de simulatie</a></p></div>
+</section>
+<section class="grp" id="1918"><h2>🎯 Nieuwe tactiek</h2>
+<div class="box"><h3>Stoottroepen (1918)</h3>
+<p>In maart 1918 vielen de Duitsers aan met kleine groepen goed getrainde stoottroepen. Ze vermeden sterke punten en drongen zo diep mogelijk door, terwijl tweede golven de achtergebleven verdedigers opruimden. Gesteund door een kort, zeer hevig bombardement en dichte mist werkte dat: in een paar dagen rukten ze verder op dan de geallieerden in 1916 in vijf maanden. Maar de troepen raakten uitgeput en de aanvoer kon niet volgen. <a class="ref" href="#bron-13">[13]</a><a class="ref" href="#bron-12">[12]</a></p></div>
+<div class="box"><h3>Alle wapens samen (1918)</h3>
+<p>Bij Le Hamel (4 juli 1918) en Amiens (8 augustus) werkten infanterie, tanks, artillerie en vliegtuigen voor het eerst echt samen, volgens een strak plan. Het geschut schoot niet dagenlang van tevoren, maar opende pas bij de aanval, zodat de verrassing behouden bleef. Doelen werden van tevoren opgemeten. Vliegtuigen wierpen zelfs munitie af aan parachutes. <a class="ref" href="#bron-14">[14]</a><a class="ref" href="#bron-15">[15]</a> <a class="lk sim" href="simulatie.html#amiens">▶ In de simulatie</a></p></div>
+<div class="box"><h3>De Hindenburglinie</h3>
+<p>De Duitse Siegfriedstellung van 1917 was geen enkele loopgraaf maar een zone van kilometers diep: prikkeldraadgordels, betonnen bunkers voor machinegeweren, een voorste en een achterste linie. Bij Bellicourt liep ze over een tunnel van het Canal de Saint-Quentin, waarin de Duitsers troepen veilig konden onderbrengen. <a class="ref" href="#bron-17">[17]</a> <a class="lk sim" href="simulatie.html#hindenburg">▶ In de simulatie</a></p></div>
+</section>
+<section class="grp" id="bronnen"><h2>Bronnen</h2><ol class="bronnen"><li id="bron-1">Wikipedia (en), Battle of the Somme – <a href="https://en.wikipedia.org/wiki/Battle_of_the_Somme" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_the_Somme</a></li><li id="bron-2">Wikipedia (en), First day on the Somme – <a href="https://en.wikipedia.org/wiki/First_day_on_the_Somme" target="_blank" rel="noopener">en.wikipedia.org/wiki/First_day_on_the_Somme</a></li><li id="bron-3">Wikipedia (en), Creeping barrage – <a href="https://en.wikipedia.org/wiki/Creeping_barrage" target="_blank" rel="noopener">en.wikipedia.org/wiki/Creeping_barrage</a></li><li id="bron-4">Wikipedia (en), Mines on the first day of the Somme – <a href="https://en.wikipedia.org/wiki/Mines_on_the_first_day_of_the_Somme" target="_blank" rel="noopener">en.wikipedia.org/wiki/Mines_on_the_first_day_of_the_Somme</a></li><li id="bron-5">Wikipedia (en), Lochnagar mine – <a href="https://en.wikipedia.org/wiki/Lochnagar_mine" target="_blank" rel="noopener">en.wikipedia.org/wiki/Lochnagar_mine</a></li><li id="bron-6">Wikipedia (en), Vickers machine gun – <a href="https://en.wikipedia.org/wiki/Vickers_machine_gun" target="_blank" rel="noopener">en.wikipedia.org/wiki/Vickers_machine_gun</a></li><li id="bron-7">Wikipedia (en), MG 08 – <a href="https://en.wikipedia.org/wiki/MG_08" target="_blank" rel="noopener">en.wikipedia.org/wiki/MG_08</a></li><li id="bron-8">Wikipedia (en), Mark I tank – <a href="https://en.wikipedia.org/wiki/Mark_I_tank" target="_blank" rel="noopener">en.wikipedia.org/wiki/Mark_I_tank</a></li><li id="bron-9">Wikipedia (en), Battle of Flers–Courcelette – <a href="https://en.wikipedia.org/wiki/Battle_of_Flers–Courcelette" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Flers–Courcelette</a></li><li id="bron-10">Wikipedia (en), A7V – <a href="https://en.wikipedia.org/wiki/A7V" target="_blank" rel="noopener">en.wikipedia.org/wiki/A7V</a></li><li id="bron-11">Wikipedia (en), Second Battle of Villers-Bretonneux – <a href="https://en.wikipedia.org/wiki/Second_Battle_of_Villers-Bretonneux" target="_blank" rel="noopener">en.wikipedia.org/wiki/Second_Battle_of_Villers-Bretonneux</a></li><li id="bron-12">Wikipedia (en), Operation Michael – <a href="https://en.wikipedia.org/wiki/Operation_Michael" target="_blank" rel="noopener">en.wikipedia.org/wiki/Operation_Michael</a></li><li id="bron-13">Wikipedia (en), Infiltration tactics – <a href="https://en.wikipedia.org/wiki/Infiltration_tactics" target="_blank" rel="noopener">en.wikipedia.org/wiki/Infiltration_tactics</a></li><li id="bron-14">Wikipedia (en), Battle of Hamel – <a href="https://en.wikipedia.org/wiki/Battle_of_Hamel" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Hamel</a></li><li id="bron-15">Wikipedia (en), Battle of Amiens (1918) – <a href="https://en.wikipedia.org/wiki/Battle_of_Amiens_(1918)" target="_blank" rel="noopener">en.wikipedia.org/wiki/Battle_of_Amiens_(1918)</a></li><li id="bron-16">Wikipedia (en), Chemical weapons in World War I – <a href="https://en.wikipedia.org/wiki/Chemical_weapons_in_World_War_I" target="_blank" rel="noopener">en.wikipedia.org/wiki/Chemical_weapons_in_World_War_I</a></li><li id="bron-17">Wikipedia (en), Hindenburg Line – <a href="https://en.wikipedia.org/wiki/Hindenburg_Line" target="_blank" rel="noopener">en.wikipedia.org/wiki/Hindenburg_Line</a></li></ol></section>
+</main>
+<footer>Somme 14–18 · bezoekersgids · <a href="index.html">menu</a> · <a href="https://github.com/RvWest67/somme-loopgravenkaart#readme">bronnen en licenties</a></footer>
+
+</body>
+</html>
