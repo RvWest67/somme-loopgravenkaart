@@ -1,10 +1,10 @@
 /* Service worker Somme 14–18 – offline gebruik.
    Versie wordt bij elke build automatisch afgeleid uit de inhoud van de bestanden. */
-const VERSION = '711cc0fe3a';
+const VERSION = '945901bc35';
 const PAGES = 'somme-pages-' + VERSION;
 const TILES = 'somme-tiles';          // alleen bekeken OSM-tegels, geen bulk-download
 const MAX_TILES = 2500;
-const FILES = ["./", "index.html", "kaart.html", "gmroute.js", "icon-maskable.svg", "icon.svg", "manifest.webmanifest", "popsheet.js", "qr.svg", "vendor/leaflet-rotate/leaflet-rotate.js", "vendor/leaflet/leaflet.css", "vendor/leaflet/leaflet.js"];
+const FILES = ["./", "index.html", "kaart.html", "simulatie.html", "gmroute.js", "icon-maskable.svg", "icon.svg", "manifest.webmanifest", "popsheet.js", "qr.svg", "vendor/leaflet-rotate/leaflet-rotate.js", "vendor/leaflet/leaflet.css", "vendor/leaflet/leaflet.js"];
 
 self.addEventListener('install', ev => {
   ev.waitUntil(caches.open(PAGES).then(c => c.addAll(FILES.map(u => new Request(u, {cache: 'reload'})))).then(() => self.skipWaiting()));
