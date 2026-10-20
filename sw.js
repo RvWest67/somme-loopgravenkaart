@@ -1,6 +1,6 @@
 /* Service worker Somme 14–18 – offline gebruik.
    Versie wordt bij elke build automatisch afgeleid uit de inhoud van de bestanden. */
-const VERSION = 'f95cef5c0d';
+const VERSION = 'ff4abe6172';
 const PAGES = 'somme-pages-' + VERSION;
 const TILES = 'somme-tiles';          // alleen bekeken OSM-tegels, geen bulk-download
 const MAX_TILES = 2500;
